@@ -1,4 +1,3 @@
 influxdb
 requests
-arrow
 schedule

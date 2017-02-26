@@ -7,13 +7,16 @@ services:
     depends_on:
       - influxdb
   influxdb:
-      image: influxdb
+      image: influxdb:alpine
       ports:
         - "8083:8083"
         - "8086:8086"
-        - "8090:8090"
+      volumes:
+        - influxdb:/var/lib/influxdb
       healthcheck:
         test: ["CMD", "ping", "-c","1", "http://localhost:8086"]
         interval: 30s
         timeout: 10s
         retries: 5
+volumes:
+  influxdb:
