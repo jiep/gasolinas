@@ -47,23 +47,23 @@ def getDataAndInsert(client):
             print(fecha)
             if(estacion["Precio Biodiesel"]):
                 client.write_points(parseEstacion(estacion, "Precio Biodiesel", "biodiesel", fecha), database=DATABASE_NAME)
-            elif(estacion["Precio Bioetanol"]):
+            if(estacion["Precio Bioetanol"]):
                 client.write_points(parseEstacion(estacion, "Precio Bioetanol", "bioetanol", fecha), database=DATABASE_NAME)
-            elif(estacion["Precio Gas Natural Comprimido"]):
+            if(estacion["Precio Gas Natural Comprimido"]):
                 client.write_points(parseEstacion(estacion, "Precio Gas Natural Comprimido", "gasNaturalComprimido", fecha), database=DATABASE_NAME)
-            elif(estacion["Precio Gas Natural Licuado"]):
+            if(estacion["Precio Gas Natural Licuado"]):
                 client.write_points(parseEstacion(estacion, "Precio Gas Natural Licuado", "gasNaturalLicuado", fecha), database=DATABASE_NAME)
-            elif(estacion["Precio Gases licuados del petróleo"]):
+            if(estacion["Precio Gases licuados del petróleo"]):
                 client.write_points(parseEstacion(estacion, "Precio Gases licuados del petróleo", "gasesLicuadosPetroleo", fecha), database=DATABASE_NAME)
-            elif(estacion["Precio Gasoleo A"]):
+            if(estacion["Precio Gasoleo A"]):
                 client.write_points(parseEstacion(estacion, "Precio Gasoleo A", "gasoleoA", fecha), database=DATABASE_NAME)
-            elif(estacion["Precio Gasoleo B"]):
+            if(estacion["Precio Gasoleo B"]):
                 client.write_points(parseEstacion(estacion, "Precio Gasoleo B", "gasoleoB", fecha), database=DATABASE_NAME)
-            elif(estacion["Precio Gasolina 95 Protección"]):
+            if(estacion["Precio Gasolina 95 Protección"]):
                 client.write_points(parseEstacion(estacion, "Precio Gasolina 95 Protección", "gasolina95Proteccion", fecha), database=DATABASE_NAME)
-            elif(estacion["Precio Gasolina  98"]):
+            if(estacion["Precio Gasolina  98"]):
                 client.write_points(parseEstacion(estacion, "Precio Gasolina  98", "gasolina98", fecha), database=DATABASE_NAME)
-            elif(estacion["Precio Nuevo Gasoleo A"]):
+            if(estacion["Precio Nuevo Gasoleo A"]):
                 client.write_points(parseEstacion(estacion, "Precio Nuevo Gasoleo A", "gasoleoA", fecha), database=DATABASE_NAME)
 
 if __name__ == '__main__':
